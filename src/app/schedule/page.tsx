@@ -118,13 +118,15 @@ export default async function page({
           />
         </div>
         <div className="w-full md:w-5/6 flex flex-col gap-2">
-          <Label htmlFor="phone">Phone</Label>
+          <Label htmlFor="phone">
+            Phone <span className="text-xs">(without country code)</span>
+          </Label>
           <Input
             required
             aria-required
             name="phone"
             type="tel"
-            pattern="[0-9]{10}([0-9])?"
+            pattern="[0-9]{10}"
             placeholder="Phone"
             className="bg-black"
           />
