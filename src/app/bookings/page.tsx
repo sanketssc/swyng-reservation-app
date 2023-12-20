@@ -10,6 +10,8 @@ type Booking = {
   time: string;
 };
 
+export const revalidate = 10;
+
 import {
   Table,
   TableBody,
