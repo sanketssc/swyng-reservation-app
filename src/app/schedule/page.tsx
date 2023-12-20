@@ -72,9 +72,9 @@ export default async function page({
           const email = formdata.get("email") as string;
           const phone = formdata.get("phone") as string;
 
-          const a = `${year}-${month}-${day}`;
+          const date_string = `${year}-${month}-${day}`;
           const x =
-            await sql`INSERT into temp_bookings (id,name, email, phone, date, time) VALUES (${id},${name},${email},${phone},${a},${hhmm}) RETURNING *`;
+            await sql`INSERT into temp_bookings (id,name, email, phone, date, time) VALUES (${id},${name},${email},${phone},${date_string},${hhmm}) RETURNING *`;
           redirect("/schedule/payment");
         }}
       >
