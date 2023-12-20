@@ -9,6 +9,10 @@ const stripe: Stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
 export default async function page() {
   const session_id = cookies().get("stripe_session_id")?.value as string;
+
+  if (!session_id) {
+    redirect("/");
+  }
   if ((await stripe.checkout.sessions.retrieve(session_id)).status === "open") {
     redirect("/schedule/failed?reason=payment_not_completed");
   }

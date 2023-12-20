@@ -13,6 +13,9 @@ export default async function page({
   searchParams: { reason: string };
 }) {
   const session_id = cookies().get("stripe_session_id")?.value as string;
+  if (!session_id) {
+    redirect("/");
+  }
   if ((await stripe.checkout.sessions.retrieve(session_id)).status === "open") {
     const x = await stripe.checkout.sessions.expire(session_id);
   } else {
