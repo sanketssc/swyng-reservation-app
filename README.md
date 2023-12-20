@@ -1,8 +1,8 @@
 # Deployment Link:
 
-This project is deployed on vercel and can be found here:
+This project is deployed on vercel and can be found here: [https://swyng-reservation.vercel.app/](https://swyng-reservation.vercel.app/)
 
-### Test Card for India
+## Test Card for India
 
 Card Number:
 
@@ -11,4 +11,5 @@ Card Number:
 ```
 
 Expiry Date: Any future date
+
 CVV: Any 3 digit number
