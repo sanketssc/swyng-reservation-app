@@ -39,6 +39,7 @@ export default async function page({
   const hhmm = date.toLocaleTimeString("en-US", {
     hour: "2-digit",
     minute: "2-digit",
+    timeZone: "Asia/Kolkata",
   });
 
   const today = new Date();
@@ -86,6 +87,7 @@ export default async function page({
             day: "numeric",
             month: "short",
             year: "numeric",
+            timeZone: "Asia/Kolkata",
           })}
         </h2>
         <h2 className="text-xl font-semibold mb-10">
@@ -93,6 +95,7 @@ export default async function page({
           {date.toLocaleTimeString("en-US", {
             hour: "2-digit",
             minute: "2-digit",
+            timeZone: "Asia/Kolkata",
           })}
         </h2>
         <div className="w-full md:w-5/6 flex flex-col gap-2">
