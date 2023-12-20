@@ -8,5 +8,3 @@ export async function GET(req: NextRequest) {
     await sql`Select time from bookings where date = ${date}`;
   return new Response(JSON.stringify(bookingTimes));
 }
-
-export const revalidate = 10;

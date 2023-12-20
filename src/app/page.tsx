@@ -6,6 +6,7 @@ import * as React from "react";
 import { Link2, Loader2 } from "lucide-react";
 import Link from "next/link";
 
+export const revalidate = 10;
 const t = [
   { name: "1:30 PM", value: (13 * 60 + 30) * 60 * 1000 },
   { name: "2:00 PM", value: 14 * 60 * 60 * 1000 },
